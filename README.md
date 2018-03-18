@@ -3,12 +3,19 @@
 
 Twitter's Tweets Stream Sentiment Analyser using Apache Spark - Spark Stream, Spark SQL , Stanford NLP(Natural Language Processing)
 
-
-Data mining is a field where one applies machine learning and statistical techniques to some concrete problems. Every new project covers a different field. This gives me the opportunity to discover and learn new domains without changing my job profile.  Recently, I have developed an interest in deep learning. A concept of teaching computers how to learn, this really excites me!
-
-Requirements : 
+Requirments
 
 IntelliJ IDEA 2017.3.4 (Community Edition) , Java SDK 1.8 , Scala 2.11 , SBT 1.1.1 , Apache Spark 2.2.0 , Stanford NLP Library 3.9.1
+
+Downalod Stanford NLP Model file (English Model Used - stanford-corenlp-3.9.1-models-english.jar)
+home brew installations:
+brew install scala.  , brew install sbt@1
+IntelliJ IDEA install Scala plugin
+Download Spark and execute following command from your own project folder in Terminal
+
+/Users/furqan/Documents/spark-2.2.0-bin-hadoop2.7/bin/spark-submit --jars /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --driver-class-path /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --conf spark.executor.extraClassPath=/Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --class "TwitterStreamAnalyzer" --master local[4] --packages "org.apache.bahir:spark-streaming-twitter_2.11:2.2.0,edu.stanford.nlp:stanford-corenlp:3.9.1,org.apache.spark:spark-sql_2.11:2.2.0" /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/target/scala-2.11/spark-twsentimentanalyzer_2.11-1.0.jar
+
+
 
 Spark - a quick introduction
 
