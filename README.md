@@ -7,11 +7,17 @@ Requirments
 
 IntelliJ IDEA 2017.3.4 (Community Edition) , Java SDK 1.8 , Scala 2.11 , SBT 1.1.1 , Apache Spark 2.2.0 , Stanford NLP Library 3.9.1
 
+Download Spark v 2.2.0 ( https://www.apache.org/dyn/closer.lua/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz)
+
 Downalod Stanford NLP Model file (English Model Used - stanford-corenlp-3.9.1-models-english.jar)
-home brew installations:
-brew install scala.  , brew install sbt@1
+
+home brew installations: brew install scala.  , brew install sbt@1
+
 IntelliJ IDEA install Scala plugin
-Download Spark and execute following command from your own project folder in Terminal
+
+In Terminal : cd to IntelliJ IDEA project dir. -> sbt package
+
+Spark Submit job to cluster : spark-submit jar file ->  execute following command from your own project folder in Terminal
 
 /Users/furqan/Documents/spark-2.2.0-bin-hadoop2.7/bin/spark-submit --jars /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --driver-class-path /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --conf spark.executor.extraClassPath=/Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --class "TwitterStreamAnalyzer" --master local[4] --packages "org.apache.bahir:spark-streaming-twitter_2.11:2.2.0,edu.stanford.nlp:stanford-corenlp:3.9.1,org.apache.spark:spark-sql_2.11:2.2.0" /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/target/scala-2.11/spark-twsentimentanalyzer_2.11-1.0.jar
 
