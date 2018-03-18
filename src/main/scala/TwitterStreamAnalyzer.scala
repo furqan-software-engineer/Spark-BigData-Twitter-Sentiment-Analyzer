@@ -28,10 +28,10 @@ object TwitterStreamAnalyzer {
     val ssc = new StreamingContext(sc, Seconds(10))
 
     // Twitter App API Credentials - underlying twitter4j Library
-    System.setProperty("twitter4j.oauth.consumerKey", "0Xz7J9xyAggmU9BYQbbZ8VubC")
-    System.setProperty("twitter4j.oauth.consumerSecret", "VRJUsIEB90QO5MTGXX6wRl74dn1cBzZiz2EfnDRU3gnZueoAiU")
-    System.setProperty("twitter4j.oauth.accessToken", "1483059830-kPmvWcVjtOUTrlemr8lgSHH8xAIE6UDDBrtqqJt")
-    System.setProperty("twitter4j.oauth.accessTokenSecret", "KuX0a0lOq5KAXTcjjc1QUiogtebG0fAQIHpESVrqsTgFM")
+    System.setProperty("twitter4j.oauth.consumerKey", "CONSUMER_API_KEY")
+    System.setProperty("twitter4j.oauth.consumerSecret", "CONSUMER_API_SECRET")
+    System.setProperty("twitter4j.oauth.accessToken", "ACCESS_TOKEN")
+    System.setProperty("twitter4j.oauth.accessTokenSecret", "ACCESS_TOKEN_SECRET")
 
     val filters = Seq("iphone","samsung galaxy,samsung note")
 //    val twitterStream = TwitterUtils.createStream(ssc,None,filters)
