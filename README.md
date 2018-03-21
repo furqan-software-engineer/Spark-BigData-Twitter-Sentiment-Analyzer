@@ -15,17 +15,17 @@ home brew installations: brew install scala.  , brew install sbt@1
 
 IntelliJ IDEA install Scala plugin
 
-In Terminal : cd to IntelliJ IDEA project dir. -> sbt package
+In Terminal : cd to IntelliJ IDEA project dir. -> sbt package (a jar file is created under target folder)
 
 Spark Submit job to cluster : spark-submit jar file ->  execute following command from your own project folder in Terminal
 
-/Users/furqan/Documents/spark-2.2.0-bin-hadoop2.7/bin/spark-submit --jars /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --driver-class-path /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --conf spark.executor.extraClassPath=/Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/stanford-corenlp-3.9.1-models-english.jar --class "TwitterStreamAnalyzer" --master local[4] --packages "org.apache.bahir:spark-streaming-twitter_2.11:2.2.0,edu.stanford.nlp:stanford-corenlp:3.9.1,org.apache.spark:spark-sql_2.11:2.2.0" /Users/furqan/IdeaProjects/Spark-TWSentimentAnalyzer/target/scala-2.11/spark-twsentimentanalyzer_2.11-1.0.jar
+Furqans-MacBook-Pro:Spark-TWSentimentAnalyzer furqan$spark-submit --jars stanford-corenlp-3.9.1-models-english.jar --driver-class-path stanford-corenlp-3.9.1-models-english.jar --conf spark.executor.extraClassPath=stanford-corenlp-3.9.1-models-english.jar --class "TwitterStreamAnalyzer" --master local[*] /target/scala-2.11/spark-twsentimentanalyzer_2.11-1.0.jar
 
 
 
 Spark - a quick introduction
 
-For those of you that haven’t heard of Spark before, it’s a project written by the folks over at Berkeley, and is a key component of their Berkeley Data Analytics Stack. It is written mostly in Scala, and provides APIs for Scala, Java and Python. It is fully compatible with Hadoop Distributed File System, but extends on Hadoop’s core functionality by providing in-memory cluster computation
+For those of you that haven’t heard of Spark before, spark is used for distributed processing of large scale data over a cluster. Its is 100x faster than previous systems . It is written mostly in Scala, and provides APIs for Scala, Java and Python. It is fully compatible with Hadoop Distributed File System, but extends on Hadoop’s core functionality by providing in-memory cluster computation
 
 
 Spark Streaming
